@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var a = 10;
+        var a = '10';
+        console.log(a); // '10'
+
+        if(true){
+            var a = true;
+        }
+        console.log(a); // true
+
+        // 중복 변수 선언 자체가 안됩니다..
+        let b = 10;
+        //let a = '10';
+    
+        //변수의 유효범위는 중괄호
+    
+        if(true){
+            let b = true;
+            console.log(b); // true
+        }
+        console.log(b); // 10
+
+        console.log('------------------------------------')
+
+
+        const gender='남자';
+       // gender = '여자';
+        
+        console.log(gender);
+        // 오류가 납니다 상수는 값 변경  x 
+
+
+        const arr = [1,2,3];
+        // arr = '홍길동'; // 변경불가
+
+        arr[0] = '홍길동'; // 가능
+        arr.push('홍길자'); // 가능
+
+        console.log(arr); // 홍길동 2 3 홍길자
+
+        const person = {name:'홍길동'};
+        // 내부만 변경 가능하다!
+        person.name = '이순신';
+        person.age = 20;
+        console.log(person);
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

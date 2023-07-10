@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+
+        let list = [
+            {
+                "num" : 1,
+                "title" : "hello",
+                "info": ["banana", "apple"], 
+                "profile" : {"birth": "20201111", "img": "https://wwww.test.com/1"}
+            },
+            {
+                "num" : 1,
+                "title" : "hello",
+                "info": ["melon", "orange"], 
+                "profile" : {"birth": "20201212", "img": "https://wwww.test.com/2"}
+            }
+        ]
+            
+        
+        // 배열 대괄호 []
+        //const [arr1,arr2] = list;
+        // 객체 중괄호 {}
+        //const {title} = arr2;
+        
+        // const[,{title}] = list;
+        // console.log(title);
+
+        //두번째 객체의 num, title, info 이름 바꿔서 가지고오기
+
+        // const [,{num:a,title:b,info:c}] = list;
+        
+        // console.log(a,b,c);
+        
+        // const [,{info:[a,b]}] = list;
+        
+        // console.log(a,b)
+        // //첫번째 객체의 profile안의 birth img가져오기
+
+        const [{profile:{birth,img}}] = list;
+        console.log(birth,img);
+
+    </script>
+    
+</body>
+</html>

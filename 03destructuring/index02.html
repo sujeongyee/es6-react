@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let obj = {name:'이순신',age:20};
+        // 기존문법
+        // console.log(obj.name);
+        // console.log(obj['name']);
+
+        //구조분해할당
+        // let {name,age} = obj;
+        // console.log(name,age);
+        // let {...x} = obj;
+        // console.log(x); // obj로 반환
+
+        console.log('-----------------------------');
+
+        let person = {
+            name : '홍길자',
+            age : 20,
+            job : [1,2,3,4,5]
+        }
+        //name 이라는 키를 n 변수로 가지고 나옴
+        let {name : n} = person;
+        console.log(n); // 홍길자
+
+        let{name:n1,age:n2,job:arr} = person;
+        console.log(n1);
+        console.log(n2);
+        console.log(arr);
+
+        
+    </script>
+    
+</body>
+</html>
